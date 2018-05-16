@@ -33,7 +33,13 @@ public class QuadroPrincipal extends JFrame {
 	PainelRetaJava prj = new PainelRetaJava();
 	PainelCirculoAlgoritmo pca = new PainelCirculoAlgoritmo();
 	PainelCirculoJava pcj = new PainelCirculoJava();
-	
+
+	/**
+	 * Componente de interface grafica com usuario.
+	 * Esta classe gera uma janela com paineis para cada exemplo de 'plot'.
+	 * 		para retas: DDA, drawLine (java)
+	 * 		para circulos: SENeCOS, drawOval (java)
+	 * */
 	public QuadroPrincipal(){
 		 this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 		 
@@ -81,6 +87,14 @@ public class QuadroPrincipal extends JFrame {
 		 this.setVisible( true );
 	}
 	
+	/**
+	 * cria campos para o painel e atribui evento ao botao para desenhar
+	 * a reta
+	 * campos do painel:
+	 * 		labels para: x1, y1, x2, y2
+	 * 		entrada para: x1, y1, x2, y2
+	 * 		botao "reta" com evento para desenhar a reta no quadro
+	 * */
 	public JComponent camposReta(){
 		JPanel campos = new JPanel(new BorderLayout(5, 5));
 		botaoR = new JButton("reta");
@@ -111,6 +125,15 @@ public class QuadroPrincipal extends JFrame {
 		return campos;
 	}
 	
+	
+	/**
+	 * cria campos para o painel e atribui evento ao botao para desenhar
+	 * o circulo
+	 * campos do painel:
+	 * 		labels para: raio
+	 * 		entrada para: raio
+	 * 		botao "circulo" com evento para desenhar o circulo no quadro
+	 * */
 	public JComponent camposCirculo(){
 		JPanel campos = new JPanel(new BorderLayout(5, 5));
 		botaoC = new JButton("circulo");

@@ -6,19 +6,31 @@ import javax.swing.JPanel;
 public class PainelCirculoAlgoritmo  extends JPanel{
 	double raio;
 
+	/**
+	 * Construtor padrao inicializa o raio com 0 para que nao seja desenhado
+	 * qualquer circulo
+	 *
+	 * */
 	public PainelCirculoAlgoritmo(){
 		this.raio=0 ;
 	}
 
+	/**
+	 * atribui valor do raio ao circulo
+	 * */
 	public void circulo(double raio){
 		this.raio=raio;
 	}
-	
+
+	/**
+	 * metodo desenha um quadro nas dimenssoes (200x200) com os eixos x e y
+	 * e desenha um circulo com o raio definido
+	 * */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+
 		double x, y;
-		
+
 		g.drawLine(50, 50, 250, 50);
 		g.drawLine(50, 250, 250, 250);
 		g.drawLine(50, 50,50, 250);
