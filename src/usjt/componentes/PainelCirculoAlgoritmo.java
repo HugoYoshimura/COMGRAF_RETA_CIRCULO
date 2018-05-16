@@ -21,16 +21,16 @@ public class PainelCirculoAlgoritmo  extends JPanel{
 	public void circulo(double raio){
 		this.raio=raio;
 	}
-	
+
 	/**
 	 * metodo desenha um quadro nas dimenssoes (200x200) com os eixos x e y
 	 * e desenha um circulo com o raio definido
 	 * */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+
 		double x, y;
-		
+
 		g.drawLine(50, 50, 250, 50);
 		g.drawLine(50, 250, 250, 250);
 		g.drawLine(50, 50,50, 250);
