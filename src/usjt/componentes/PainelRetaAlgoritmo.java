@@ -5,9 +5,17 @@ import javax.swing.JPanel;
 
 public class PainelRetaAlgoritmo extends JPanel {
 
+	// define par de variaveis para cada ponto da reta
 	double x1, y1, x2, y2;
+	// flag para permitir desenhar a reta
 	boolean desenhar;
 	
+	/**
+	 * Construtor padrao com valores iniciados no canto superior esquerdo
+	 * do espaço dimencionado para a 'plotar' a reta.
+	 * Neste a flag desenhar eh iniciada com false, para que nada seja
+	 * desenhado ao instanciar este JPanel
+	 * */
 	public PainelRetaAlgoritmo(){
 		this.x1=50 ;
 		this.y1=50;
@@ -27,6 +35,11 @@ public class PainelRetaAlgoritmo extends JPanel {
 		this.y2=y2;
 	}
 	
+	/**
+	 * Desenha um quadro (200x200) afim de exibir um plano com os eixos
+	 * x e y.
+	 *
+	 * */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
@@ -47,7 +60,12 @@ public class PainelRetaAlgoritmo extends JPanel {
 		desenhar = false;
 		
 	}
-	
+
+	/**
+	 * desenha uma reta utilizando o metodo DDA.
+	 * utiliza como pontos para a reta os valores atribuidos as
+	 * variaveis globais (x1, y1) e (x2, y2)
+	 * */
 	public void drawLine(Graphics g) {
 		double x, y, inic, fim, dx, dy, m, calcX, calcY;
 		boolean mode = true;
